@@ -1,0 +1,575 @@
+/*---------------------------------------------*/
+/* BASIC SETUP */
+/*---------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+*:focus {outline: none} 
+
+html, body {
+    background-color: #fff;
+    color: #3F5D45;
+    font-family: 'Noto Sans TC', '微軟正黑體';
+    font-size: 16px;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+i.icon {
+    font-size: 1.3em;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*---------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/*---------------------------------------------*/
+
+.margin-row {
+    margin: 0 4vw;
+}
+
+.flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-icon,
+.logo-icon-light {
+    width: 4vw;
+    height: 4vw;
+    margin-right: 1vw;
+}
+
+.logo-icon img,
+.logo-icon-light img,
+.logo-text img {
+    width: 100%;
+}
+
+.logo-text {
+    width: 16.7vw;
+    height: 2.6vw;
+}
+
+.link {
+    list-style: none;
+}
+
+.link li {
+    display: inline-block;
+}
+
+.lightGreen-bg {
+    background-color: #EAF0ED;
+    height: 41vw;
+}
+
+/*---------------------------------------------*/
+/* HEADER */
+/*---------------------------------------------*/
+
+header {
+    margin: 3vw 0 8vw 0;
+}
+
+/* STICKY NAV */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;    
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    z-index: 9999;
+    padding: 0.3vw 0;
+    box-shadow: 0 2px 2px #efefef;
+}
+
+.sticky .logo-icon {
+    width: 3vw;
+    height: 3vw;
+}
+
+.sticky .logo-text {
+    width: 13vw;
+    height: auto;
+    margin-top: 0.2vw;
+}
+
+/* MAIN NAV */
+
+.navbar {   
+    margin-bottom: 3vw;
+}
+
+.mobile-nav-icon {
+    display: none;
+    width: 4.8vw;
+    cursor: pointer;
+}
+
+.mobile-nav-icon i {
+    font-size: 2.6em;
+}
+
+#mobile-main-link { 
+    display: none;
+}
+
+.main-nav li {
+    margin-left: 4vw;
+}
+
+.main-nav li a {
+    display: inline-block;
+    width: 5vw;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.main-nav-cart li a {
+    font-size: 1.2em;
+    color: #3F5D45;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: #8DA291;
+    transition: color 0.2s;
+}
+
+.main-nav li a:active,
+.main-nav li a:hover {
+    color: #3F5D45;
+}
+
+#main-link {
+    margin-left: 30vw;
+}
+
+.home-img {
+    height: 48vw;
+    overflow: hidden;
+}
+
+.home-img img {
+    width: 100%;
+    margin-top: -13vw;
+}
+
+.main-item {
+    margin: -8vw 8vw 0 8vw;
+}
+
+.main-item li {
+    width: 33.2%;
+    height: 25vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-item li img {
+    width: 100%;
+    filter: blur(5px);
+    margin-top: -4vw;
+}
+
+.main-item li:last-child img {
+    transform: rotate(180deg);
+}
+
+.main-item li a {
+    writing-mode: vertical-rl;
+    font-size: 1.5em;
+    letter-spacing: 0.3em; 
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-item li a:link,
+.main-item li a:visited {
+    color: #fff;
+    font-weight: 300;
+    background-color: rgba(63, 93, 69, 0.8);
+    transition: color 0.2s, font-weight 0.2s, background-color 0.2s;
+}
+
+.main-item li a:hover,
+.main-item li a:active {
+    color: #3F5D45;
+    font-weight: 500;
+    background-color: rgba(255, 225, 128, 0.8);
+}
+
+/*---------------------------------------------*/
+/* INTRO */
+/*---------------------------------------------*/
+
+.intro-1 {
+    margin-bottom: 10vw;
+}
+
+.intro-content {
+    position: relative;
+}
+
+.intro-img {
+    width: 45vw;
+    height: 45vw;
+    overflow: hidden;
+}
+
+.intro-img img {
+    width: 100%;
+    margin-top: -11vw;
+}
+
+.intro-1-img {
+    position: absolute;
+    top: -2vw;
+}
+
+.intro-2-img {
+    position: absolute;
+    top: -2vw;
+    right: 0;
+}
+
+.intro-para {
+    writing-mode: vertical-rl;
+    width: 26vw;
+    height: 28vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.intro-para p {
+    margin: 0;
+    color: #8DA291;
+    text-align: justify;
+    line-height: 2.5em; 
+    font-size: 1.1em;
+}
+
+.intro-1-para {
+    position: absolute;
+    top: 6.8vw;
+    left: 52vw;
+}
+
+.intro-2-para {
+    position: absolute;
+    top: 6.8vw;
+    left: 2vw;
+}
+
+.intro-quote {
+    font-family: 'Noto Serif TC', serif;
+    writing-mode: vertical-rl;
+    font-size: 2.3em;
+    vertical-align: center;
+    line-height: 1.2em;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.intro-quote p span {
+    font-weight: 300;
+    writing-mode: horizontal-tb;
+}
+
+.intro-quote p:last-child {
+    padding-top: 1.5vw;
+}
+
+.intro-1-quote {
+    position: absolute;
+    top: -1.5vw;
+    right: 0;
+
+    width: 8.7vw;
+    height: 40vw;
+}
+
+.intro-2-quote {
+    position: absolute;
+    top: -1.5vw;
+    left: 34vw;
+
+    width: 8.6vw;
+    height: 40vw;
+}
+
+.intro-3 {
+    height: 49vw;
+}
+
+.intro-3-quote {
+    width: 8.7vw;
+
+    margin: 0 auto;
+    padding-top: 8vw;
+}
+
+/*---------------------------------------------*/
+/* PRODUCT */
+/*---------------------------------------------*/
+
+.card {
+    width: 29.3vw;
+    position: relative;
+}
+
+.label {
+    background-color: #3F5D45;
+    color: #EAF0ED;
+    writing-mode: vertical-rl;
+    width: 3.5vw;
+    height: 10.4vw;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+
+    display: flex;
+    align-items: center;
+    padding-top: 1.6vw; 
+
+    position: absolute;
+    top: 0;
+    left: 2vw;
+}
+
+.heart-icon {
+    width: 2vw;
+    height: 1.8vw;
+
+    position: absolute;
+    top: 1.9vw;
+    right: 2.1vw;
+}
+
+.heart-icon i {
+    margin: 0;
+    width: 100%;
+}
+
+.product-img {
+    width: 100%;
+    height: 30.8vw;
+    overflow: hidden;
+}
+
+.product-img img {
+    width: 100%;
+}
+
+.product-1 {
+    margin-top: -6vw;
+}
+
+.product-2 {
+    margin-top: -6vw;
+}
+
+.product-3 {
+    margin-top: -6vw;
+}
+
+.product-text {
+    width: 100%;
+    height: 5.5vw;
+    display: flex;
+}
+
+.product-text div:first-child {
+    width: 58%;
+    font-weight: 400;
+    font-size: 1.25em;
+    color: #3F5D45;
+
+    border: 1px solid #EAF0ED;
+    border-right: 0;
+}
+
+.product-text div:last-child {
+    width: 42%;
+    font-weight: 500;
+    font-size: 1.25em;
+    color: #3F5D45;
+    border: 1px solid #EAF0ED;
+}
+
+.buy-btn {
+    width: 100%;
+    height: 6.3vw;
+    border: 0;
+
+    font-size: 1.5em;
+    font-weight: 500;
+    font-family: 'Noto Sans TC', '微軟正黑體';
+}
+
+.buy-btn:link,
+.buy-btn:visited {
+    background-color: #EAF0ED; 
+    color: #3F5D45;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.buy-btn:active,
+.buy-btn:hover {
+    background-color: #3F5D45; 
+    color: #EAF0ED;
+}
+
+/*---------------------------------------------*/
+/* CONTACT */
+/*---------------------------------------------*/
+
+.contact {
+    height: 11.3vw; 
+    background-color: #3F5D45;
+    margin-top: 5.9vw;
+}
+
+.contact-form {
+    padding: 2.9vw 12vw;
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon-light {
+    margin-right: 2vw;
+}
+
+.contact-text {
+    color: #EAF0ED;
+    font-size: 1.5em;
+    width: 33vw;
+    height: 3.2vw;
+}
+
+.input-area {
+    width: 37vw;
+    height: 5.5vw;
+    position: relative;
+}
+
+.input-area input {
+    padding-left: 5.2vw;
+    font-size: 1.6em;
+}
+
+.mail-icon {
+    position: absolute;
+    width: 2.3vw;
+    height: 2.3vw;
+    top: 1.6vw;
+    left: 2vw;
+}
+
+.submit-btn {
+    width: 6.3vw;
+    height: 5.5vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.input-area input,
+.submit-btn input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.submit-btn input {
+    background-color: #FFE180;
+    padding: 0;
+    color: #3F5D45;
+}
+
+/*---------------------------------------------*/
+/* FOOTER */
+/*---------------------------------------------*/
+
+footer {
+    padding: 2.9vw 12vw;
+}
+
+.footer-section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.footer-logo {
+    position: absolute;
+    top: 1vw;
+    left: 0;
+}
+
+.footer-quote {
+    width: 5.8vw;
+
+    font-size: 1.7em;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.info {
+    height: 6.6vw;
+    position: absolute;
+    left: 0;
+    bottom: 6.1vw;
+}
+
+.social-links {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.social-links div a img{
+    width: 100%;
+}
+
+.social-links div {
+    display: inline-block;
+    width: 3.1vw;
+    height: 3.1vw;
+    margin-right: 1vw; 
+}
+
+.copyright {
+    font-family: Times, serif;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
