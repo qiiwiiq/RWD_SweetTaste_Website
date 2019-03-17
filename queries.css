@@ -125,8 +125,13 @@
     
     .intro-content {
         position: static;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     
     .intro-img {
@@ -147,7 +152,9 @@
     }
     
     .intro-para {
-        writing-mode: horizontal-tb;
+        -webkit-writing-mode: horizontal-tb;
+            -ms-writing-mode: lr-tb;
+                writing-mode: horizontal-tb;
         width: 100vw;
         height: auto;
         padding-top: 8vw;
@@ -179,20 +186,35 @@
     }
     
     .intro-quote {
-        writing-mode: horizontal-tb;
+        -webkit-writing-mode: horizontal-tb;
+            -ms-writing-mode: lr-tb;
+                writing-mode: horizontal-tb;
         font-size: 2em;
         line-height: 1.4em;
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
 
         background-color: #FFFFFF;
     }
     
     .intro-quote p span {
-        writing-mode: vertical-lr;
+        -webkit-writing-mode: vertical-lr;
+            -ms-writing-mode: tb-lr;
+                writing-mode: vertical-lr;
     }
     
     .intro-quote p:last-child {
@@ -220,14 +242,21 @@
     
     .intro-3-quote {
         width: 100vw;
+        padding-top: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     /*--------- PRODUCT ----------*/
 
     .product .flexbox {
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     
     #card-2,
@@ -280,7 +309,8 @@
 
     .contact-form {
         padding: 8vw;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
 
     .logo-icon-light {
@@ -293,8 +323,12 @@
     .contact-text {
         width: auto;
         height: 8.8vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         letter-spacing: 0.05em;
         font-size: 1.8em;
     }
@@ -368,7 +402,7 @@
 }
 
 @media only screen and (max-width: 530px) {
-    html, body { font-size: 15px; }
+    html, body { font-size: 14px; }
     i.icon { font-size: 2em; }
 
     .sticky .ion-md-cart {
