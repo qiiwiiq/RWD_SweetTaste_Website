@@ -1,0 +1,74 @@
+header {
+    margin: 3vw 0 8vw 0;
+
+    @include respond(tab-port) { margin: 0; };
+
+    .home-img {
+        height: 48vw;
+        overflow: hidden;
+
+        @include respond(tab-port) { height: 73.9vw; };
+
+        img {
+            width: 100%;
+            margin-top: -13vw;
+            @include respond(tab-port) { margin-top: -1vw; };
+        }
+    }
+
+    .main-item {
+        @include flexSpaceBetween;
+        margin: -8vw 8vw 0 8vw;
+
+        @include respond(tab-port) { margin: 0; };
+
+        li {
+            width: 33.2%;
+            height: 25vw;
+            overflow: hidden;
+            position: relative;
+
+            @include respond(tab-port) { height: 40vw; };
+
+            img {
+                width: 100%;
+                filter: blur(5px);
+                margin-top: -4vw;
+            }
+
+            &:last-child img {
+                transform: rotate(180deg);
+            }
+
+            a {
+                writing-mode: vertical-rl;
+                font-size: 1.5rem;
+                letter-spacing: .7vw; 
+                
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            
+                @include flexCenter;
+
+                &:link,
+                &:visited {
+                    color: $color-white;
+                    font-weight: 300;
+                    background-color: rgba($color-primary-dark, 0.8);
+                    transition: all 0.2s;
+                }
+
+                &:hover,
+                &:active {
+                    color: $color-primary-dark;
+                    font-weight: 500;
+                    background-color: rgba($color-secondary, 0.8);
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,24 @@
+.logo-text {
+    width: 16.7vw;
+    height: 2.6vw;
+
+    @include respond(tab-port) { 
+        margin-left: 5vw;
+        width: 32.4vw;
+        height: 4.7vw;
+    };
+
+    img {
+        width: 100%;
+    }
+}
+
+.logo-icon {
+    width: 4vw;
+    height: 4vw;
+    margin-right: 1vw;
+    
+    img {
+        width: 100%;
+    }
+}

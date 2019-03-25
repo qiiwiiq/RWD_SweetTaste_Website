@@ -1,0 +1,151 @@
+/*---------------------------------------------*/
+/* INTRO */
+/*---------------------------------------------*/
+.section-intro {
+    &--1  {
+        margin-bottom: 10vw;
+        @include respond(tab-port) { margin-bottom: 0; };
+    }
+
+    &--3 {
+        height: 49vw;
+        width: 100vw;
+        @include flexCenter;
+        @include respond(tab-port) { height: 32vw; };
+    }
+
+}
+
+
+/*---------------------------------------------*/
+/* PRODUCT */
+/*---------------------------------------------*/
+
+.section__product {
+    @include flexSpaceBetween;
+    @include respond(tab-port) { justify-content: center; };
+}
+
+
+/*---------------------------------------------*/
+/* CONTACT */
+/*---------------------------------------------*/
+
+.section__contact {
+    height: 11.3vw; 
+    background-color: $color-primary-dark;
+    margin-top: 5.9vw;
+
+    @include respond(tab-port) { 
+        height: 49vw; 
+        margin-top: 8vw;
+    };
+
+    .form {
+        display: flex;
+        align-items: center;
+
+        @include respond(tab-port) { 
+            padding: 8vw;
+            flex-wrap: wrap;
+        };
+
+        &__logo {
+            margin-right: 2vw;
+
+            @include respond(tab-port) { 
+                width: 10.7vw;
+                height: 10.7vw;
+                margin: 0 4vw;
+            };
+
+            @media only screen and (max-width: 500px) { margin: 0 2.2vw 0 2vw; };
+        }
+
+        &__index {
+            color: $color-primary-light;
+            font-size: 1.5rem;
+            width: 33vw;
+
+            @include respond(tab-port) { 
+                width: auto;
+                height: 8.8vw;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.5vw;
+                font-size: 2.4rem;
+            };
+
+            @media only screen and (max-width: 650px) { font-size: 2.2em };
+            @media only screen and (max-width: 600px) { font-size: 2rem; };
+            @include respond(mobile) { 
+                font-size: 1.9rem;
+                font-weight: 300;
+                letter-spacing: 0.3vw; 
+            };
+        }
+
+        &__input {
+            width: 37vw;
+            height: 5.5vw;
+            position: relative;
+
+            @include respond(tab-port) { 
+                width: 80vw;
+                height: 15vw;
+                margin-top: 6vw;
+            };
+
+            .mail-icon {
+                position: absolute;
+                top: 50%;
+                left: 2vw;
+                transform: translateY(-45%);
+
+                @include respond(tab-port) { 
+                    width: 6.4vw;
+                    left: 3.3vw;
+                };
+
+                i {
+                    font-size: 2.3rem;
+                }
+            }
+
+            input {
+                width: 100%;
+                height: 100%;
+                border: 0;
+                padding-left: 5.2vw;
+                font-size: 1.6rem;
+
+                @include respond(tab-port) { 
+                    padding-left: 11.5vw;
+                    font-size: 1.7em;
+                };
+            }
+            
+            .submit-btn {
+                width: 6.3vw;
+                height: 5.5vw;
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                @include respond(tab-port) { 
+                    width: 17.1vw;
+                    height: 15vw;
+                };
+
+                input {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    padding: 0;
+                    background-color: $color-secondary;
+                    color: $color-primary-dark;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.u-margin-row { 
+    margin: 0 4vw; 
+    @include respond(tab-port) { margin: 0 };
+}
+
+.u-inner-section { 
+    padding: 2.9vw 12vw; 
+    @include respond(tab-port) { padding: 0 };
+}
+
+.u-link {
+    list-style: none;
+
+    li { display: inline-block; }
+}

@@ -1,0 +1,95 @@
+.footer {
+    height: 33vw;
+    background-color: $color-primary-light;
+
+    @include respond(tab-port) { 
+        padding: 8vw 0 6vw 8vw;
+        height:  70vw !important;
+    };
+
+    &__content {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    &__logo {
+        position: absolute;
+        top: 1vw;
+        left: 0;
+
+        @include respond(tab-port) { 
+            margin: 0;
+            top: 0; 
+        };
+    }
+
+    &__quote {
+        font-size: 1.5rem;
+        line-height: 3.9vw;
+        letter-spacing: 0.3vw;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include respond(tab-port) { display: none; };
+
+        .intro__quote--dash {
+            height: 48px;
+        }
+    }
+
+    &__info {
+        height: 6.6vw;
+        position: absolute;
+        left: 0;
+        bottom: 6.1vw;
+
+        @include respond(tab-port) { 
+            height: auto;
+            top: 17vw;
+            font-size: 1.2rem;
+        };
+    }
+
+    &__social-links {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        @include respond(tab-port) { 
+            bottom: 0;
+            top: 42vw;
+        };
+
+        div {
+            display: inline-block;
+            width: 3.1vw;
+            height: 3.1vw;
+            margin-right: 1vw; 
+
+            @include respond(tab-port) { 
+                width: 6vw;
+                height: 6vw;
+                margin-right: 2vw; 
+            };
+        }
+
+        div a img {
+            width: 100%;
+        }
+    }
+
+    &__copyright {
+        font-family: Times, serif;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        @include respond(tab-port) { 
+            left: 0;
+            bottom: 0;
+            font-size: 1.2rem;
+        }
+    }
+}

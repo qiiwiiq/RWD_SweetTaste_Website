@@ -1,0 +1,152 @@
+#card-2,
+#card-3 {
+    @include respond(tab-port) { display: none; };
+}
+
+.card {
+    width: 29.3vw;
+    position: relative;
+    @include respond(tab-port) { width: 84vw; };
+
+    .label {
+        background-color: $color-primary-dark;
+        color: $color-primary-light;
+        writing-mode: vertical-rl;
+        width: 3.5vw;
+        height: 10.4vw;
+        font-weight: 500;
+        letter-spacing: .2vw;
+    
+        display: flex;
+        align-items: center;
+        padding-top: 1.4vw; 
+    
+        position: absolute;
+        top: 0;
+        left: 2vw;
+
+        @media only screen and (max-width: 900px) { font-weight: 400; };
+
+        @include respond(tab-port) { 
+            width: 10vw;
+            height: 23vw;
+            padding-top: 2.7vw; 
+            left: 5.6vw;
+            font-size: 1.4rem;
+            letter-spacing: .6vw;
+        };
+
+        @media only screen and (max-width: 600px) { font-size: 1.2rem; };
+        @include respond(mobile) { font-size: 1.1rem };
+    }
+
+    .heart-icon {
+        width: 2vw;
+        height: 1.8vw;
+    
+        position: absolute;
+        top: 1.9vw;
+        right: 2.1vw;
+
+        @include respond(tab-port) { 
+            width: 5.3vw;
+            height: 4.9vw;
+    
+            top: 5.1vw;
+            right: 6.5vw;
+        };
+    
+        i {
+            margin: 0;
+            width: 100%;
+        }
+    }
+
+    .product-img {
+        width: 100%;
+        height: 30.8vw;
+        overflow: hidden;
+
+        @include respond(tab-port) { height: 84vw; };
+
+        img {
+            width: 100%;
+        }
+
+        .product-1 {
+            margin-top: -6vw;
+            @include respond(tab-port) { margin-top: -21vw; };
+        }
+        
+        .product-2 {
+            margin-top: -6vw;
+        }
+        
+        .product-3 {
+            margin-top: -6vw;
+        }
+    }
+
+    .product-text {
+        width: 100%;
+        height: 5.5vw;
+        display: flex;
+
+        @include respond(tab-port) { height: 15vw; };
+
+        div {
+            @include flexCenter;
+            font-size: 1.25rem;
+            color: $color-primary-dark;
+            border: 1px solid $color-primary-light;
+
+            @include respond(tab-port) { font-size: 1.7rem; };
+            @media only screen and (max-width: 600px) { font-size: 1.6rem; };
+            @include respond(mobile) { font-size: 1.5rem };
+
+            &:first-child {
+                width: 58%;
+                font-weight: 400;
+                border-right: 0;
+            }
+
+            &:last-child {
+                width: 42%;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .buy-btn {
+        @include flexCenter;
+
+        width: 100%;
+        height: 6.3vw;
+        border: 0;
+    
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-family: 'Noto Sans TC', '微軟正黑體';
+
+        @include respond(tab-port) { 
+            height: 17.3vw;
+            font-size: 2rem; 
+        };
+
+        @media only screen and (max-width: 600px) { font-size: 1.8rem; };
+        @include respond(mobile) { font-size: 1.6rem };
+    
+        &:link,
+        &:visited {
+            background-color: $color-primary-light; 
+            color: $color-primary-dark;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        &:active,
+        &:hover {
+            background-color: $color-primary-dark; 
+            color: $color-primary-light;
+        }
+    }
+}

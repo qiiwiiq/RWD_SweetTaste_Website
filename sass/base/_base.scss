@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+*:focus {outline: none} 
+
+html {
+    font-size: 18px; 
+
+    @include respond(big-desktop) { font-size: 24px; };
+    @include respond(tab-land) { font-size: 16px; };
+    @media only screen and (max-width: 900px) { font-size: 15px; };
+    @media only screen and (max-width: 800px) { font-size: 14px; };
+    @include respond(tab-port) { font-size: 16px };
+    @media only screen and (max-width: 550px) { font-size: 15px; };
+    @include respond(mobile) { font-size: 14px; };
+    @include respond(small-mobile) { font-size: 12px; };
+    @media only screen and (max-width: 350px) { font-size: 10px; };
+}
+
+body {
+    box-sizing: border-box;
+    background-color: $color-white;
+    color: $color-primary-dark;
+    font-family: 'Noto Sans TC', '微軟正黑體';
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+i.icon {
+    font-size: 1.3rem;
+
+    @include respond(tab-port) { font-size: 2.2rem };
+}

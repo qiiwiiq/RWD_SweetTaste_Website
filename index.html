@@ -12,50 +12,37 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:400,600,700,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
 
-    <link rel="apple-touch-icon" sizes="76x76" href="./img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="./img/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#3f5d45">
-    <meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="queries.css">
+    <link rel="shortcut icon" href="./img/favicon/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Sweetaste*</title>
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="margin-row flexbox">
-                <a class="mobile-nav-icon js--nav-icon"><i class="icon ion-md-menu"></i></a>
-                <div class="flexbox">
-                    <div class="logo-icon"><img src="./img/logo-icon.png" alt="Sweetaste logo"></div>
-                    <div class="logo-text"><img src="./img/logo-text.png" alt="Sweetaste logo"></div>
-                </div>
-                <ul id="main-link" class="main-nav link">
+        <nav class="nav u-margin-row">
+            <a class="mobile-nav-icon js--nav-icon"><i class="icon ion-md-menu"></i></a>
+            <div class="nav__logo">
+                <div class="logo-icon"><img src="./img/logo-icon.png" alt="Sweetaste logo"></div>
+                <div class="logo-text"><img src="./img/logo-text.png" alt="Sweetaste logo"></div>
+            </div>
+            <div class="nav__link">
+                <ul class="nav__link--list u-link">
                     <li><a href="#">首頁</a></li>
                     <li><a href="#">甜點</a></li>
                     <li><a href="#">登入</a></li>
-                </ul>
-                <ul class="main-nav-cart link js--cart">
-                    <li><a href="#"><i class="icon ion-md-cart"></i></a></li>
                 </ul>
             </div>
-            <div id="mobile-main-link" >
-                <ul class="main-nav link">
-                    <li><a href="#">首頁</a></li>
-                    <li><a href="#">甜點</a></li>
-                    <li><a href="#">登入</a></li>
+            <div class="nav__cart">
+                <ul class="u-link js--cart">
+                    <li><a href="#"><i class="icon ion-md-cart"></i></a></li>
                 </ul>
             </div>
         </nav>
 
-        <div class="margin-row">
+        <div class="u-margin-row">
             <div class="home-img"><img src="https://bit.ly/2OhbMHr" alt="Sweetaste-home" ></div>
-            <ul class="main-item link flexbox">
+            <ul class="main-item u-link">
                 <li>
                     <img src="https://bit.ly/2O7zQtH">
                     <a href="#">本日精選</a>
@@ -72,84 +59,82 @@
         </div>
     </header>
 
-    <section class="intro-1 lightGreen-bg js--section-intro">
-        <div class="intro-content margin-row">
-            <div class="intro-quote intro-1-quote">
-                <p>為什麼<span>&#124;</span></p>
+    <section class="section-intro--1 intro js--section-intro">
+        <div class="intro__content u-margin-row">
+            <div class="intro__quote intro__quote--1">
+                <p>為什麼<span class="intro__quote--dash"></span></p>
                 <p>選擇了做甜點？</p>
             </div>
-            <div class="intro-img intro-1-img"><img src="https://bit.ly/2xPn7Eq" alt="dessert"></div>
-            <div class="intro-para intro-1-para">
+            <div class="intro__img intro__img--1"><img src="https://bit.ly/2xPn7Eq" alt="dessert"></div>
+            <div class="intro__para intro__para--1">
                 <p>青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
                 <p>是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
             </div>
         </div>
     </section>
 
-    <section class="intro-2 lightGreen-bg">
-        <div class="intro-content margin-row">
-            <div class="intro-quote intro-2-quote">
-                <p>為什麼<span>&#124;</span></p>
+    <section class="section-intro--2 intro">
+        <div class="intro__content u-margin-row">
+            <div class="intro__quote intro__quote--2">
+                <p>為什麼<span class="intro__quote--dash"></span></p>
                 <p>一定要吃甜點？</p>  
             </div>
-            <div class="intro-img intro-2-img"><img src="https://bit.ly/2R5tqwD" alt="dessert"></div>
-            <div class="intro-para intro-2-para">
+            <div class="intro__img intro__img--2"><img src="https://bit.ly/2R5tqwD" alt="dessert"></div>
+            <div class="intro__para intro__para--2">
                 <p>青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
                 <p>是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
             </div>
         </div>
     </section>
 
-    <section class="intro-3">
-            <div class="intro-quote intro-3-quote">
-                <p>想吃甜點<span>&#124;</span></p>
+    <section class="section-intro--3">
+            <div class="intro__quote intro__quote--3">
+                <p>想吃甜點<span class="intro__quote--dash"></span></p>
                 <p>是不需要理由的。</p>
             </div>
     </section>
 
-    <section class="product">
-        <div class="margin-row flexbox">
-            <div id="card-1" class="card">
-                <div class="label">本日精選</div>
-                <div class="heart-icon"><i class="icon ion-md-heart-empty"></i></div>
-                <div class="product-img"><img class="product-1" src="https://bit.ly/2zBjQuq" alt="蜜糖多納滋"></div>
-                <div class="product-text"> 
-                    <div class="center">蜜糖多那滋</div>
-                    <div class="center">NT&#36; 450</div>
-                </div>
-                <a href="" class="buy-btn center">加入購物車</a>
+    <section class="section__product u-margin-row">
+        <div id="card-1" class="card">
+            <div class="label">本日精選</div>
+            <div class="heart-icon"><i class="icon ion-md-heart-empty"></i></div>
+            <div class="product-img"><img class="product-1" src="https://bit.ly/2zBjQuq" alt="蜜糖多納滋"></div>
+            <div class="product-text"> 
+                <div>蜜糖多那滋</div>
+                <div>NT&#36; 450</div>
             </div>
+            <a href="" class="buy-btn">加入購物車</a>
+        </div>
 
-            <div id="card-2" class="card">
-                <div class="label">本日精選</div>
-                <div class="heart-icon"><i class="icon ion-md-heart-empty"></i></div>
-                <div class="product-img"><img class="product-2" src="https://bit.ly/2zBDAxX" alt="蜜糖多納滋"></div>
-                <div class="product-text">
-                    <div class="center">草莓布丁蛋糕</div>
-                    <div class="center">NT&#36; 450</div>
-                </div>
-                <a href="" class="buy-btn center">加入購物車</a>
+        <div id="card-2" class="card">
+            <div class="label">本日精選</div>
+            <div class="heart-icon"><i class="icon ion-md-heart-empty"></i></div>
+            <div class="product-img"><img class="product-2" src="https://bit.ly/2zBDAxX" alt="蜜糖多納滋"></div>
+            <div class="product-text">
+                <div>草莓布丁蛋糕</div>
+                <div>NT&#36; 450</div>
             </div>
+            <a href="" class="buy-btn">加入購物車</a>
+        </div>
 
-            <div id="card-3" class="card">
-                <div class="label">本日精選</div>
-                <div class="heart-icon"><i class="icon ion-md-heart-empty"></i></div>
-                <div class="product-img"><img class="product-3" src="https://bit.ly/2QbVsVR" alt="蜜糖多納滋"></div>
-                <div class="product-text">
-                    <div class="center">藍莓奶酪</div>
-                    <div class="center">NT&#36; 450</div>
-                </div>
-                <a href="" class="buy-btn center">加入購物車</a>
+        <div id="card-3" class="card">
+            <div class="label">本日精選</div>
+            <div class="heart-icon"><i class="icon ion-md-heart-empty"></i></div>
+            <div class="product-img"><img class="product-3" src="https://bit.ly/2QbVsVR" alt="蜜糖多納滋"></div>
+            <div class="product-text">
+                <div>藍莓奶酪</div>
+                <div>NT&#36; 450</div>
             </div>
+            <a href="" class="buy-btn">加入購物車</a>
         </div>
     </section>
 
-    <section class="contact">
-        <div class="contact-form">
-            <div class="logo-icon-light"><img src="./img/logo-light.png" alt="Sweetaste logo"></div>
-            <div class="contact-text">訂閱你我的甜蜜郵件</div>
+    <section class="section__contact u-inner-section">
+        <div class="form">
+            <div class="form__logo logo-icon"><img src="./img/logo-light.png" alt="Sweetaste logo"></div>
+            <div class="form__index">訂閱你我的甜蜜郵件</div>
             <form>
-                <div class="input-area">
+                <div class="form__input">
                     <div class="mail-icon"><i class="material-icons">email</i></div>
                     <input type="text">
                     <div class="submit-btn">
@@ -160,23 +145,23 @@
         </div>
     </section>
 
-    <footer class="lightGreen-bg">
-        <div class="footer-section">
-            <div class="footer-logo logo-text"><img src="./img/logo-text.png" alt="Sweetaste logo"></div>
-            <div class="intro-quote footer-quote">
-                <p>今天是個<span>&#124;</span></p>
-                <p>吃甜點的好日子<span>&#9702;</span></p>
+    <footer class="footer u-inner-section">
+        <div class="footer__content">
+            <div class="footer__logo logo-text"><img src="./img/logo-text.png" alt="Sweetaste logo"></div>
+            <div class="footer__quote intro__quote">
+                <p>今天是個<span class="intro__quote--dash"></span></p>
+                <p>吃甜點的好日子。</p>
             </div>
-            <div class="info">
+            <div class="footer__info">
                 <p>07-1234-5678</p>
                 <p>sweetaste@email.com</p>
                 <p>800 高雄市新興區幸福路 520 號</p>
             </div>
-            <div class="social-links">
+            <div class="footer__social-links">
                 <div><a href="#"><img src="img/ic-line@.png" alt="line"></a></div>
                 <div><a href="#"><img src="img/ic-facebook.png" alt="facebok"></a></div>
             </div>
-            <div class="copyright">
+            <div class="footer__copyright">
                 <p>&copy; 2019 Sweetaste* All Rights Reserved</p>
             </div>
         </div>
