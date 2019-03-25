@@ -1,11 +1,11 @@
 /* MAIN NAV */
 
 .nav {   
-    margin-bottom: 3vw;
+    margin-bottom: 2vw;
     @include flexSpaceBetween;
 
     @include respond(tab-port) { 
-        padding: 3vw 8vw 2vw 8vw;
+        padding: 1vw 8vw;
         height: auto;
         margin-bottom: 0;
         position: relative;
@@ -43,12 +43,12 @@
             position: absolute;
             width: 88%;
             margin: 0;
-            top: 12vw;
+            top: 10vw;
             background-color: $color-white;
         };
 
-        @media only screen and (max-width: 650px) { top: 13vw; };
-        @include respond(mobile) { top: 14vw; };
+        @media only screen and (max-width: 650px) { top: 11vw; };
+        @include respond(mobile) { top: 12vw; };
 
         &--list li {
             margin-left: 4vw;
@@ -135,6 +135,7 @@
 
     .nav__link {
         @include respond(tab-port) { 
+            background: rgba($color-white, 0.98);
             top: 10vw;
             left: 8vw;
         };
